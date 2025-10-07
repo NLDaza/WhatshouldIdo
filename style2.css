@@ -1,0 +1,165 @@
+/* ===== Estilos generales ===== */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #4da6ff;
+    box-sizing: border-box;
+    background: linear-gradient(180deg,#f6f7fb,#ffffff);
+}
+
+/* ===== Header hero (página principal) ===== */
+header.hero {
+    background-color: #2563eb; /* azul */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: calc(100vh - 60px); /* ocupa toda la pantalla menos footer */
+    padding: 20px;
+}
+
+/* Menú horizontal del hero */
+header.hero nav ul.menu {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+header.hero nav ul.menu li a {
+    display: block;
+    background-color: #4da6ff;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+header.hero nav ul.menu li a:hover {
+    background-color: #1e40af;
+}
+
+/* ===== Header compacto para subpáginas ===== */
+header.subpage-header {
+    background-color: #2563eb;
+    color: white;
+    padding: 10px 20px;      
+    text-align: center;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Título del header compacto */
+header.subpage-header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Menú horizontal de subpáginas */
+header.subpage-header nav ul.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+}
+
+header.subpage-header nav ul.menu li a {
+    display: block;
+    background-color: #4da6ff;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+header.subpage-header nav ul.menu li a:hover {
+    background-color: #1e40af;
+}
+
+/* ===== Main y secciones tipo card ===== */
+main {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 18px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+}
+
+main section.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 6px 18px rgba(13,14,20,0.06);
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.tag {
+    background: rgba(255,255,255,0.6);
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+}
+
+main section.card ul, main section.card ol {
+    padding-left: 18px;
+}
+
+main section.card li {
+    margin-bottom: 8px;
+}
+
+main section.card h2, main section.card h3 {
+    margin: 0 0 8px 0;
+    color: #2563eb;
+}
+
+main section.card a {
+    color: #1e40af;
+    text-decoration: none;
+}
+
+main section.card a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Footer ===== */
+footer {
+    height: 60px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+}
+
+/* ===== Responsividad ===== */
+@media (max-width: 900px) {
+    main {
+        grid-template-columns: 1fr;
+        padding: 12px;
+    }
+
+    header.subpage-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
